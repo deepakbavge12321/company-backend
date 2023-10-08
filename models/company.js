@@ -8,7 +8,7 @@ const companySchema = new mongoose.Schema({
         required: true
     },
     contact: {
-        type: String, // Changed type to String for flexibility (e.g., including country code)
+        type: String, 
         required: true,
         validate: {
             validator: (value) => /^\d{10}$/.test(value), // Validate contact number format (10 digits)
@@ -18,7 +18,7 @@ const companySchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
-        select: false // Make sure password is not selected by default
+        select: false 
     },
     coFounders: [{
         name: {
